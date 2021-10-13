@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dragView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/album3"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="371dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/itunes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="340dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5sp"
+                android:layout_weight="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/album3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvTitle2"
+                    android:layout_width="218dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="음악이름"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSingerName2"
+                    android:layout_width="207dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="가수"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="false">
+
+            <ImageView
+                android:id="@+id/album"
+                android:layout_width="300sp"
+                android:layout_height="300sp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/noze"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="240sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/album">
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="노래 제목"
+                    android:textColor="#FFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/album" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Artist">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp">
+
+
+                    <SeekBar
+                        android:id="@+id/seekbar"
+                        style="@style/Widget.AppCompat.SeekBar"
+                        android:layout_width="330sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/startTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="sTime"
+                        android:textColor="#FFF"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/seekbar"
+                        app:layout_constraintTop_toBottomOf="@+id/seekbar"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/songTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="eTime"
+                        android:textColor="#FFF"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/seekbar"
+                        app:layout_constraintTop_toBottomOf="@+id/seekbar"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <CheckBox
+                            android:id="@+id/random"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_margin="20sp"
+                            android:background="@drawable/imgbtn_states2"
+                            android:button="@null"
+                            android:checked="false"
+                            app:tint="#FFF" />
+
+                        <ImageButton
+                            android:id="@+id/previous"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_margin="20sp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/previous"
+                            app:tint="#FFF" />
+
+                        <ImageButton
+                            android:id="@+id/play"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_margin="20sp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/play"
+                            app:tint="#FFFFFF" />
+
+                        <ImageButton
+                            android:id="@+id/next"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_margin="20sp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/next"
+                            app:tint="#FFF" />
+
+                        <CheckBox
+                            android:id="@+id/replay"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_margin="20sp"
+                            android:background="@drawable/imgbtn_states3"
+                            android:button="@android:color/transparent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1sp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="가수명"
+                android:textColor="#D7D7D7"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <ImageButton
+                android:id="@+id/ibSongHeart"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/heart"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="@+id/album"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                app:layout_constraintVertical_bias="0.55" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

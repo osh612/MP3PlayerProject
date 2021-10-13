@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainPlaylist"
+        android:title="플레이리스트"
+        android:icon="@drawable/itunes"/>
+
+    <item
+        android:id="@+id/likedPlaylist"
+        android:title="좋아요한 음악"
+        android:icon="@drawable/heart"/>
+
+
+</menu>

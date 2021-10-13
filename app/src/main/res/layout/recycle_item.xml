@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:background="#282828">
+
+    <ImageView
+        android:id="@+id/imgAlbum"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/itunes"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:text="음악이름"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSingerName"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="가수"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:00"
+            android:textSize="14dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>
